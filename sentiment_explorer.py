@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 from textblob import TextBlob
 
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 def sentiment_analysis(comments):
     sentiments = []
     for comment in comments:
@@ -17,6 +24,7 @@ def sentiment_analysis(comments):
 
 def main():
     st.title('Sentiment Analysis')
+    st.write("*By:* A. Vera")
     file_or_comments = st.selectbox('Select Input Method', ['Upload File', 'Enter Comments'])
     if file_or_comments == 'Upload File':
         file = st.file_uploader('Upload a CSV file with comments', type='csv')
