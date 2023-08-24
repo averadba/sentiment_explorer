@@ -82,7 +82,7 @@ def main():
             if st.button('Download Results'):
                 st.markdown('**Downloading Results**')
                 df.to_csv('sentiment_results.csv', index=False)
-                st.markdown('**Results Downloaded**')
+                st.markdown('**Results Downloaded.** Please check in your current working directory or your default directory for downloads.')
     else:
         comments = st.text_area('Enter comments, one line per comment')
         comments = comments.split('\n')
@@ -107,7 +107,7 @@ def main():
         if st.button('Download Results'):
             st.markdown('Downloading Results')
             df.to_csv('sentiment_results.csv', index=False)
-            st.write('Results Downloaded. Please check in your current working directory or your default directory for downloads.')
+            st.markdown('**Results Downloaded.** Please check in your current working directory or your default directory for downloads.')
 
 if __name__== '__main__':
     main()
