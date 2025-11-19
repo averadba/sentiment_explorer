@@ -27,7 +27,7 @@ def sentiment_analysis(comments):
 
 def main():
     st.title('Sentiment Analysis')
-    st.markdown("*By:* Dr. Alexis Vera - [Contact me](mailto:alexisv@sanjuanbautista.edu)")
+    st.markdown("*By:* Dr. Alexis Vera - [Contact me](mailto:alexisvera@gmail.com)")
     # Providing a brief description and explanations
     st.write("### Description:")
     st.write("This app performs sentiment analysis on user-provided comments. It analyzes the sentiment of the text and classifies it as Positive, Neutral, or Negative. Additionally, a sentiment score is provided, which gives a numeric representation of the sentiment ranging from -1 to 1.")
